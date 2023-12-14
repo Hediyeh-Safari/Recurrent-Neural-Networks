@@ -1,46 +1,38 @@
 # Recurrent-Neural-Networks
 
-In this project, your task is to build a Recurrent Neural Network (RNN) for stock price prediction using a provided dataset spanning five years, with one sample per day (q2_dataset.py). Follow the specified steps outlined below:
+Given a 5-year stock price dataset with daily samples, create a Recurrent Neural Network (RNN) to predict the next day's opening price using the past 3 days' Open, High, Low prices, and volume (12 features per sample). Follow these steps:
 
-Dataset Creation (train_RNN.py):
+1. **Data Preparation:**
+   - In `train_RNN.py`, create a dataset using the latest 3 days as features and the next day's opening price as the target. Randomize and split the data into 70% training and 30% testing, saving them as 'train_data_RNN.csv' and 'test_data_RNN.csv,' respectively. Comment out this code.
 
-Create a dataset using the latest 3 days' Open, High, Low prices, and volume as features, and the next day's opening price as the target.
-Randomize the created data and split it into 70% training and 30% testing.
-Save the training and testing datasets to 'train_data_RNN.csv' and 'test_data_RNN.csv' in the data directory, respectively.
-Comment out this code once completed.
-Training Script (train_RNN.py):
+2. **Training RNN:**
+   - Populate `train_RNN.py` to read 'train_data_RNN.csv,' preprocess the data, and train the RNN. Save the model as 'YOUR_ID_RNN_model' in the models directory. Ensure the test data is not used in this file after saving.
 
-Populate the file to read 'train_data_RNN.csv,' preprocess the data, and train your RNN network.
-Save the trained model with the name 'YOUR_ID_RNN_model' in the models directory.
-Ensure that the test data is not used at any point in this file after saving the model.
-Testing Script (test_RNN.py):
+3. **Testing RNN:**
+   - Populate `test_RNN.py` to read 'test_data_RNN.csv' and run predictions. Print the loss on the test data and visualize true vs. predicted values using a plot with appropriate labels.
 
-Populate the file to read 'test_data_RNN.csv' and run the prediction model.
-Print the loss on your test data and generate a plot of the true and predicted values, with appropriate labels for axes and legend.
-Command Line Execution:
+4. **Command-Line Execution:**
+   - Ensure both `train_RNN.py` and `test_RNN.py` can run from the command line without additional inputs.
 
-Ensure that both 'train_RNN.py' and 'test_RNN.py' run from the command line without requiring additional inputs or arguments.
-Include the following in your report:
+Report Contents:
 
-Dataset Creation Explanation:
+- **Dataset Creation:**
+  - Explain how the dataset was created.
 
-Describe how you created your dataset, specifying the features and target variable.
-Preprocessing Steps:
+- **Preprocessing:**
+  - Detail any preprocessing steps applied to the data.
 
-Outline any preprocessing steps undertaken, such as normalization or scaling.
-Network Design:
+- **Network Design:**
+  - Describe the steps taken to find the best network design.
+  - Explain the architecture of the final network, including the number of epochs, batch size (if applicable), loss function, and training algorithm.
 
-Detail the design steps taken to find the best network architecture, including the number of epochs, batch size (if applicable), loss function, and training algorithm.
-Final Network Architecture:
+- **Training Output:**
+  - Provide the output of the training loop with comments.
 
-Provide the architecture of your final network, specifying the chosen parameters.
-Training Loop Output:
+- **Testing Output:**
+  - Display the output from testing, including the final plot, and provide comments on the results.
 
-Display the output of the training loop with comments on the output, highlighting any trends or observations.
-Testing Output:
+- **Experimentation:**
+  - Discuss the potential impact of using more days for features, encouraging exploration without uploading datasets.
 
-Showcase the output from testing, including the final plot with comments on its interpretation.
-Experimentation:
-
-Discuss what would happen if more days were used for features and consider trying it (without uploading the datasets).
-By following these steps and providing detailed explanations and outputs in your report, you will create a comprehensive stock price prediction system using an RNN.
+Ensure clarity and conciseness in presenting your approach and results in the report.
